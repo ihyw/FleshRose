@@ -94,7 +94,7 @@
 
     /* FleshRose Config*/
     --FleshRose-main-color: #EED9C8;
-    --FleshRose-highLight-color: #AB7F38;
+    --FleshRose-highLight-color: #9A462A;
     --FleshRose-h-highLight-color: #008EC6;
     --FleshRose-h-underline-highLight-color: #99B6D4;
     --FleshRose-block-border-color: #AB7F38; 
@@ -304,4 +304,17 @@ span[data-type="tag"] span:nth-child(2) {
 span[data-type="tag"]:hover span:nth-child(2) {
     transform: scale(1.1);
     box-shadow: 0 0 .5em var(--FleshRose-h-underline-highLight-color);
+}
+
+/* 增强标签等部分列表的样式 */
+.vditor-hint.vditor-panel--left, .vditor-hint.b3-list.b3-list--background {
+    /* border: .1em solid var(--Watermelon-block-border-color); */
+    box-shadow: 0 0 .1em var(--FleshRose-block-border-color), 0px 11px 15px -7px rgba(0, 0, 0, 0.4);
+}
+.b3-list.b3-list--background.vditor-hint.vditor-panel--arrow div button {
+    box-sizing: border-box;
+}
+.b3-list.b3-list--background.vditor-hint.vditor-panel--arrow div:hover button {
+    font-size: 1em;
+    font-weight: normal;
 }
