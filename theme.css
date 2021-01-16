@@ -141,7 +141,41 @@
 }
 
 /* List */
-.vditor ul, .vditor ol {
+.vditor ol {
+    padding-left: 1.5em;
+}
+.vditor ol ol, .vditor ol ul {
+    border-left: .15em solid var(--FleshRose-h-underline-highLight-color);
+}
+.vditor ul li {
+    padding-left: 1.5em;
+    border-left: .15em solid var(--FleshRose-h-underline-highLight-color);
+    border-radius: 10px;
+}
+.vditor ul li {
+    content: ' ';
+    min-height: 24px;
+    list-style-type: none !important;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAEsWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTAiCiAgIHRpZmY6SW1hZ2VXaWR0aD0iMTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjE0NC4wIgogICB0aWZmOllSZXNvbHV0aW9uPSIxNDQuMCIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIKICAgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIgogICB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0wMS0xNVQxMzo1ODo0OCswODowMCIKICAgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0wMS0xNVQxMzo1ODo0OCswODowMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpTZXE+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InByb2R1Y2VkIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZmZpbml0eSBQaG90byAxLjguNSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMS0wMS0xNVQxMzo1ODo0OCswODowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+OOPrIwAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG/S0JRFMc/alKUYVBDQ4NENWmYgdTSoJQF1WAGWS368keg9nhPCWkNWoWCqKVfQ/0FtQbNQVAUQbQFzUUtJa/zUlAiz+We+7nfe87h3nPBGskoWb3JC9lcXguHAq6F6KKr+QULTuyMYI0pujozNxGhoX3eS7TYrces1TjuX2tbSegKWFqExxRVywtPCk+v51WTd4S7lHRsRfhM2K3JBYXvTD1e4VeTUxX+NlmLhINg7RB2peo4XsdKWssKy8vpy2YKSvU+5kscidz8nKy9MnvQCRMigIspxgniZ4hR8X48+BiUHQ3yvb/5s6xJriJepYjGKinS5HGLWpDqCVmToidkZCia/f/bVz057KtUdwTA/mwY7/3QvA3lkmF8HRlG+RhsT3CZq+WvHcLIh+ilmtZ3AM5NOL+qafFduNiC7kc1psV+JZtMazIJb6fQHoXOG2hdqvSses7JA0Q25KuuYW8fBiTeufwDP6Vn1NokcIoAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABbSURBVBiVjZAxDsAgDAMvvIk+PDP/YqVDYxQBrWrJCxwnGeOJRdeM6IQKcAEO9KjH2RQI6smgdqBm0A+Q6rKWF1u2WjkMOEZg+2CaltvfMYIr+/fUDKwPlJEvbtqUKNz/7+pmAAAAAElFTkSuQmCC);
+    background-size: .35em .35em;
+    background-position: .5em .6em;
+    background-repeat: no-repeat;
+    padding-left: 1.5em;
+}
+.vditor ol li {
+    margin-left: 1em;
+}
+.vditor ul ol li, .vditor ul ul li {
+    border-left: .15em solid var(--FleshRose-h-underline-highLight-color);
+    border-radius: 10px;
+}
+.vditor ul ol, .vditor ol ol {
+    margin-left: -.8em !important;
+}
+.vditor ul ul, .vditor ol ul {
+    margin-left: -1.5em !important;
+}
+/* .vditor ul, .vditor ol {
     padding-left: 1.5em;
 }
 .vditor ul li {
@@ -166,7 +200,7 @@
     .vditor ul ul, .vditor ol ul {
         margin-left: -.95em !important;
     }
-}
+} */
 
 /* blockRef */
 .block__popover, .vditor-ir div[data-type="block-ref-embed"]>div[data-render], .vditor-ir div[data-type="block-query-embed"]>div[data-render] {
@@ -183,6 +217,14 @@
 }
 
 /* unifiedColor */
+
+/* 对工具栏的美化 */
+.vditor-toolbar__item.b3-tooltips.b3-tooltips__s:hover, .vditor-toolbar__item.b3-tooltips.b3-tooltips__s.b3-menu__item--current {
+    background-color: transparent;
+}
+.vditor-toolbar__item.b3-tooltips.b3-tooltips__s:hover svg, .vditor-toolbar__item.b3-tooltips.b3-tooltips__s.b3-menu__item--current svg {
+    color: var(--FleshRose-highLight-color);
+}
 
 /* 设置及开始界面 */
 .b3-list-item.b3-list-item--big:hover,
@@ -250,7 +292,9 @@
 /* 顶栏美化 */
 #toolbar div, .ft__primary,
 /* 标签 */
-span[data-type="tag"] span:nth-child(2)
+span[data-type="tag"] span:nth-child(2),
+/* 对顶部工具栏的美化 */
+.vditor-toolbar__item.b3-tooltips.b3-tooltips__s svg
 {
     transition: all .3s linear;
 }
@@ -308,7 +352,7 @@ span[data-type="tag"]:hover span:nth-child(2) {
 
 /* 增强标签等部分列表的样式 */
 .vditor-hint.vditor-panel--left, .vditor-hint.b3-list.b3-list--background {
-    /* border: .1em solid var(--Watermelon-block-border-color); */
+    /* border: .1em solid var(--FleshRose-block-border-color); */
     box-shadow: 0 0 .1em var(--FleshRose-block-border-color), 0px 11px 15px -7px rgba(0, 0, 0, 0.4);
 }
 .b3-list.b3-list--background.vditor-hint.vditor-panel--arrow div button {
@@ -317,4 +361,14 @@ span[data-type="tag"]:hover span:nth-child(2) {
 .b3-list.b3-list--background.vditor-hint.vditor-panel--arrow div:hover button {
     font-size: 1em;
     font-weight: normal;
+}
+
+/* 标题过长后尾部的白色阴影去除 */
+.layout-tab-bar .item__text::after {
+    background: transparent !important;
+}
+
+/* h标签的符号颜色统一 */
+.vditor-ir__marker.vditor-ir__marker--heading {
+    color: var(--FleshRose-h-highLight-color)
 }
