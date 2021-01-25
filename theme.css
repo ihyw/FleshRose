@@ -421,3 +421,6 @@ span[data-type="tag"]:hover span:nth-child(2) {
 .file-tree__header {
     background-color: transparent;
 }
+.dock__item.b3-tooltips.b3-tooltips__e.dock__item--active svg {
+    color: var(--FleshRose-highLight-color);
+}
