@@ -51,10 +51,27 @@
     --b3-diff-del-surface: #ffb6ba;
 
     /* 图表颜色 */
-    --b3-graph-point: #202124;
+    --b3-graph-p-point: #076f7e;
+    --b3-graph-heading-point: #660e7a;
+    --b3-graph-math-point: #80FFA5;
+    --b3-graph-code-point: #00DDFF;
+    --b3-graph-table-point: #37A2FF;
+    --b3-graph-list-point: #FF0087;
+    --b3-graph-todo-point: #FFBF00;
+    --b3-graph-olist-point: #b3005f;
+    --b3-graph-listitem-point: #f65b00;
+    --b3-graph-bq-point: #8d48e3;
+    --b3-graph-super-point: #dd79ff;
+    --b3-graph-doc-point: #202124;
+    --b3-graph-tag-point: #dbf32f;
+    --b3-graph-asset-point: #05c091;
     --b3-graph-line: #5f6368;
+    --b3-graph-ref-line: #d23f31;
+    --b3-graph-tag-line: #5f6b06;
+    --b3-graph-tag-tag-line: #dbf32f;
+    --b3-graph-asset-line: #037457;
     --b3-graph-hl-point: #f3a92f;
-    --b3-graph-hl-line: #d23f31;
+    --b3-graph-hl-line: #4285f4;
 
     /* 编辑器工具栏高度 */
     --b3-vditor-toolbar-height: 29px;
@@ -296,7 +313,7 @@
 
 /* 对关闭图标的美化 -- 背景色 */
 .fn__flex.layout-tab-bar .item svg:hover {
-    background-color: var(--FleshRose-highLight-color);
+    background-color: #ffffff50;
     color: var(--FleshRose-close-color);
 }
 
@@ -423,4 +440,43 @@ span[data-type="tag"]:hover span:nth-child(2) {
 }
 .dock__item.b3-tooltips.b3-tooltips__e.dock__item--active svg {
     color: var(--FleshRose-highLight-color);
+}
+.b3-tooltips.b3-tooltips__s.block__icon:hover svg {
+    color: var(--FleshRose-highLight-color)
+}
+
+/* 图片默认居中CSS */
+.vditor-ir .vditor-ir__node[style=""][data-type="img"], .vditor-ir .vditor-ir__node[data-type="img"]:not([style]) {
+    display: block;
+    text-align: center !important;
+}
+.vditor-ir .vditor-ir__node.vditor-ir__node--expand[data-type="img"]:not([style]),.vditor-ir .vditor-ir__node.vditor-ir__node--expand[data-type="img"][style=""] {
+    display: block;
+    text-align: center !important;
+}
+
+/* 对关闭图标样式的美化 */
+.fn__flex.layout-tab-bar .item svg:hover,
+.b3-dialog__container svg:hover, .b3-snackbar__close.fn__a:hover {
+    color: var(--b3-card-error-background);
+    transform: rotate(180deg);
+}
+/* 设置界面动效 */
+body {
+    perspective: 500px;
+}
+.b3-dialog__container {
+    animation: show .3s ease-in-out;
+    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
+}
+@keyframes show {
+    0% {
+        transform:  translateZ(-100px) rotateX(90deg) translateY(-100px);
+    }
+}
+
+/* 关系图侧边栏美化 */
+.graph__panel {
+    background-color: var(--FleshRose-Immersive-color);
 }
